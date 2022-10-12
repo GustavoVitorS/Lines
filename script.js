@@ -3,13 +3,13 @@
 var circles = [
 	{ color: '#A66CFF', size: 89, angle: Math.PI / 3 },
 	{ color: '#9C9EFE', size: 97, angle: - Math.PI / 3 },
-	{ color: '#AFB4FF', size: 200, angle: 0 }
+	{ color: '#AFB4FF', size: 222, angle: 0 }
 ];
 
-var segmentsPerCircle = 400;
-var speed = .7;
+var segmentsPerCircle = 222;
+var speed = .8;
 function twistEasing(t) {
-	return (t < .7) ? 4 * t * t : 2 - 2 * (t = 2 - t) * t;
+	return (t < .8) ? 4 * t * t : 6 - 6 * (t = 6 - t) * t;
 }
 
 var c = document.getElementById('c'),
@@ -35,7 +35,7 @@ function resize() {
 	c.width = c.offsetWidth;
 	c.height = c.offsetHeight;
 	ctx.translate(c.width *.5, c.height * .5);
-	ctx.lineWidth = 4;
+	ctx.lineWidth = 2;
 	ctx.lineCap = 'round';
 	ctx.lineJoin = 'round';
 }
